@@ -1,19 +1,20 @@
 {
-  "name": "bloc-frontend-project-starter",
-  "version": "0.0.2",
-  "description": "Starter project for the Bloc Frontend Web Development",
+  "name": "venue-template-flickr",
+  "version": "1.0.0",
+  "description": "interating flickr into wedding venue template",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bloc/bloc-frontend-project-starter"
+    "url": "https://github.com/fattmitch/venue-template-flickr"
   },
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
-  "author": "Bloc Inc",
+  "author": "Matt Fitch",
   "license": "ISC",
   "dependencies": {
-    "hapi": "~7.5.0",
+    "angular-flickr-api-factory": "^0.5.1",
+    "hapi": "^7.5.0",
     "path": "^0.4.9"
   },
   "devDependencies": {
