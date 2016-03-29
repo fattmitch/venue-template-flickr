@@ -1,7 +1,10 @@
 <h1>Photo Gallery</h1>
 <section class="gallery-container">
     <div class="gallery">
-    <!-- Code for Flickr API integration goes here -->
-        <p>{{ message }}</p>
+        <ul class="slippry-demo" ng-repeat="photo in imageResults">
+            <li>
+                <a href="#slide1"><img ng-src="{{photo.media.m}}" alt="Image"></a>
+            </li>
+        </ul>
     </div>
 </section>

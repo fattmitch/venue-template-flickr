@@ -1,22 +1,25 @@
 (function() {
     function flickrCtrl($scope, flickrFactory) {
         
+        
+        
         flickrFactory.getImagesFromUserById({
             id:"139596112@N02",
             lang: "en-en"
         }).then(function(_data){
             
-            var originalUrl = _data.data.items[0].media.m;
-            
-            function replaceLetter(originalUrl) {
-                var newUrl = originalUrl.replace("_m.", "_b.");
-                console.log(newUrl);
+            var images = _data.data.items;
+                        
+            for (var i = 0; i < images.length; i++) {
+                images[i].media.m = images[i].media.m.replace('_m.', '_h.');
             }
+                        
+            $scope.imageResults = images;
             
-            replaceLetter(originalUrl);
-            
-            console.info(_data);
     });
+        
+        
+       
         
         
     }
