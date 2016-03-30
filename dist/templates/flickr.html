@@ -1,10 +1,20 @@
-<h1>Photo Gallery</h1>
 <section class="gallery-container">
     <div class="gallery">
-        <ul class="slippry-demo" ng-repeat="photo in imageResults">
-            <li>
-                <a href="#slide1"><img ng-src="{{photo.media.m}}" alt="Image"></a>
-            </li>
-        </ul>
+        <div class="image-container">
+            <img ng-repeat="photo in imageResults" class="main-image" ng-hide="!isCurrentSlideIndex($index)" ng-src="{{photo.media.m}}" alt="Image">
+        </div>
+
+        
+        
+        <a class="arrow prev" href="#" ng-click="nextSlide()"><img ng-src="/assets/images/prev.png" alt="previous"></a>
+        <a class="arrow next" href="#" ng-click="prevSlide()"><img ng-src="/assets/images/next.png" alt="next"></a>
+        <nav id="nav" ng-style="navPosition">
+            <div class="wrapper">
+                <div class="up"><img ng-src="/assets/images/up.png"></div>
+                <ul class="thumbs">
+                    <li ng-repeat="photo in imageResults"><a href="#" ng-class="{'active':isCurrentSlideIndex($index)}" ng-click="setCurrentSlideIndex($index);"><img class='small' ng-src="{{photo.media.thumb}}"></a></li>
+                </ul>
+            </div>
+        </nav>
     </div>
 </section>
