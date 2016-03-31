@@ -1,26 +1,101 @@
 <!DOCTYPE html>
-<html ng-app="flickrTemplate">
+<htm>
 <head lang="en">
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <title>Wedding Venue Template</title>
-    <link rel="stylesheet" href="/styles/style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Meddon' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/styles/jquery.fullPage.css">
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+    
 </head>
+
 <body>
-    
-    <ui-view></ui-view>
-    
-
+    <div class="menu-button-container">
+        <div id="nav-icon3" class="menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div id="menu" class="menu hide">
+        <ul>
+            <li data-menuanchor="top" class="active"><a href="#top">Home</a></li>
+            <li data-menuanchor="services"><a href="#services">Services</a></li>
+            <li data-menuanchor="about"><a href="#about">About Us</a></li>
+            <li data-menuanchor="contact"><a href="#contact">Contact Us</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+        </ul>
+    </div>
+    <div id="fullpage">
+        <div class="section" data-anchor="top">
+            <div class="section-container">
+                <div class="hero-image">
+                    <div class="logo-tagline">
+                        <h1 class="venue-name">Spanish Oaks Ranch</h1>
+                        <div class="tagline">Weddings &amp; Special Events Center | 805-591-9411 | Santa Margarita, CA</div>
+                    </div>
+                </div>
+                <div class="hero">
+                    <div class="text-chunk">
+                        <p>Whether you need an idyllic site for your wedding; a beautiful location for your company party; or a private retreat-like setting for any special event, Spanish Oaks Ranch is the answer for you! Spanish Oaks event center is conveniently located in the heart of California's Central Coast, halfway between San Francisco and Los Angeles. We are located just off the Hwy 101 freeway in Santa Margarita, Ca.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="section content" data-anchor="services">
+        <div class="section-container">
+            <div class="services-image"></div>
+            <h2>Services</h2>
+            <div class="text-chunk">
+                <p>Whether you need an idyllic site for your wedding; a beautiful location for your company party; or a private retreat-like setting for any special event, Spanish Oaks Ranch is the answer for you! Spanish Oaks event center is conveniently located in the heart of California's Central Coast, halfway between San Francisco and Los Angeles. We are located just off the Hwy 101 freeway in Santa Margarita, Ca.</p>
+                <p>We offer a number of ceremony sites for your wedding, from our outdoor patio overlooking the rolling hills, our heart shaped pond,  to our indoor reception area; we have different options for you to choose. Our facility can accommodate can accommodate how ever many guests you have. Complete bridal and wedding party dressing room with restroom, men's and women's restrooms and plenty of parking.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section content" data-anchor="about">
+        <div class="section-container">
+            <div class="about-image"></div>
+            <h2>About Us</h2>
+            <div class="text-chunk">
+                <p>Founders Rex and Betty Hendrix had a vision that became reality through the creation of the Spanish Oaks Ranch wedding and event center in 2006. The idea of land and beauty with others lives on as we continue to welcome our guests with determination to make each celebration here unforgettable.</p>
+                <p>We are family owned and operated, which makes for a friendly and personal environment. Our job is to help you enjoy your experience at Spanish Oaks Ranch and make your special event everything you hoped it would be. Let us remember the details. All you need to remember is your perfect day.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section content" data-anchor="contact">
+        <div class="section-container">
+            <div class="contact-image"></div>
+            <h2>Contact Us</h2>
+            <div class="contact-us-text">
+                <p>If you have any questions or comments please feel free to e-mail or call us.<br>
+    We are located just out of Santa Margarita, CA. Off of hwy 101.</p>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <div class="left">
+                        <input type="text" id="name" placeholder="Name">
+                        <input type="text" id="email" placeholder="Email">
+                        <input type="text" id="phone" placeholder="Phone Number">
+                    </div>
+                    <div class="right">
+                        <textarea id="comments" placeholder="Any additional comments?"></textarea>
+                    </div>
+                    <input class="full" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-    <script src="/scripts/angular-flickr-api-factory.js"></script>
-    <script src="/scripts/app.js"></script>
-    <script src="/scripts/controllers/flickrCtrl.js"></script>
-    <script src="/scripts/scripts.js"></script>
-    
-    
+    <script src="/scripts/menu.js"></script>
+    <script src="/scripts/jquery.fullPage.js"></script>
+    </div>
 </body>
-</html>
-
-<!-- API KEY: f1359fae5d701764195a9280d06d40bd -->
-<!-- Secret: 5e0aa56ae1b49f03 -->
+  
+</htm>
