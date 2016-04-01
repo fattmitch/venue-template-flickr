@@ -17,6 +17,7 @@
                         
             $scope.imageResults = images;
             
+            
     });
         
         $scope.currentIndex = 0;
@@ -43,6 +44,7 @@
             
             $scope.navPosition = {bottom: -(navHeight)+40 + "px"};   
         }
+        
         
         $timeout($scope.navHeight, 500, true);
         
