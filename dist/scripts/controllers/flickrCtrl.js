@@ -40,7 +40,6 @@
         
         $scope.navHeight = function () {
             var navHeight = document.getElementById('nav').scrollHeight;
-            console.log(navHeight);
             
             $scope.navPosition = {bottom: -(navHeight)+40 + "px"};   
         }
